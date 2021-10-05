@@ -1,0 +1,17 @@
+1.创建git仓库
+mkdir storagename(仓库名)
+cd storagename
+pwd  显示当前仓库位置
+git init   在仓库下，初始化一个可以管理git仓库
+2.使用git仓库
+
+文件提交：
+cd 当前的git仓库
+touch txt文件名   创建一个txt文件名，可以加后缀自定义
+git add filename文件名
+git commmit -m "提交说明"
+文件回溯：
+git reset --hard HEAD^ 当前指针回溯到上一次文件更改
+git reset --hard id号   回溯到id号的文件更改，id为前几位就行，git会自动查看
+git log 查看文件历史记录,从最近到最远
+git reflog 查看git的每一次命令，在最前面可以看到操作的当前指针id号
