@@ -30,5 +30,9 @@ git管理的是文件修改，只有修改后git add 的文件才能提交到版
 提交的是第二次修改
 撤销修改：
 git checkout -- filename文件名
-将文件恢复到最近的git add 或git commit状态
+将文件恢复到最近的git add 或git commit状态.本质是将版本库里的版本替换工作区的版本
+删除文件：
+1。先在工作区删除.手动删除。直接删除，或者终端 rm filename文件名
+2.如果删除错了使用撤销修改，git checkout -- filename文件名
+3。最后git rm filename文件名  或者git add filename文件名 删除版本库里的文件
 
