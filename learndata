@@ -15,3 +15,15 @@ git reset --hard HEAD^ 当前指针回溯到上一次文件更改
 git reset --hard id号   回溯到id号的文件更改，id为前几位就行，git会自动查看
 git log 查看文件历史记录,从最近到最远
 git reflog 查看git的每一次命令，在最前面可以看到操作的当前指针id号
+
+git区：
+工作区：电脑可以直接查看的区域
+暂存区：git add 的文件
+版本区：git commit 提交的 git add 的文件，没有git add 的文件无法提交到版本区
+
+修改：
+git管理的是文件修改，只有修改后git add 的文件才能提交到版本区，如果git add后再次修改文件，然后commit，提交到版本区的文件依旧是git add后的文件，没有加上修改.
+例如：一次修改 -> git add -> 第二次修改 -> git commit
+提交的是第一次修改
+第一次修改 -> git add -> 第二次修改 -> git add -> git commit
+提交的是第二次修改
